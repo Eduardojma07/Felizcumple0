@@ -448,9 +448,15 @@ class Turntable {
 
    play() {
   if (!discoInsertado) {
-    mostrarMensaje('Por favor, inserta el disco en el tocadiscos antes de reproducir.');
+    showMessage('Por favor, inserta el disco en el tocadiscos antes de reproducir.');
     return;
   }
+
+  if (!this.mensajeMostrado) {
+  showMessage('Fin del recorrido mimor, espero te haya gustado. ¡Feliz cumpleaños!', 10000); // 10 segundos
+  this.mensajeMostrado = true;
+}
+
 
   this.isPlaying = true;
   this.vinyl.classList.add('spinning');
@@ -458,7 +464,6 @@ class Turntable {
   this.playBtn.classList.add('playing');
   this.audio.play();
 
-  // Cambiar ícono a pausa
   const icon = document.getElementById('playPauseIcon');
   if (icon) icon.textContent = '⏸';
 
@@ -468,6 +473,7 @@ class Turntable {
     cd.classList.add('spinning');
   }
 }
+
 
 
 
@@ -604,5 +610,6 @@ function mostrarMensaje(mensaje, duracion = 3000) {
 
 const icon = document.getElementById('playPauseIcon');
 icon.textContent = isPlaying ? '⏸' : '▶';
+
 
 
