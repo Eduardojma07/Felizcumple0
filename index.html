@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feliz Cumpleaños</title>
+  <link rel="icon" type="image/png" href="images/icono.png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<main>
+  <button id="spam-btn" title="Haz clic para recibir amor">click</button>
+<section id="secret-section">
+    <h2>Ingresa la contraseña</h2>
+    <input type="text" id="secret-input" placeholder="Empezamos a hablar.." />
+    <button id="secret-btn">Desbloquear 💖</button>
+  </section>
+
+  <section id="intro-section" class="hidden">
+  <h1>¡Feliz Cumpleaños, mimor!</h1>
+  <p>Hoy empieza una pequeña aventura hecha para ti.</p>
+  <button id="btn-comenzar">Comenzar 🎁</button>
+
+</section>
+
+  
+ <section id="laberinto-section" class="hidden">
+      <h1>¡Bienvenido al Laberinto!</h1>
+      <p>Usa las flechas o los botones para mover al gatito hasta la puerta.</p>
+
+      <!-- Contenedor laberinto -->
+      <div id="laberinto" tabindex="0"></div>
+
+      <!-- Botones para mover -->
+      <div id="controles" style="text-align:center; margin-top: 15px;">
+        <button id="arriba">↑ Arriba</button><br/>
+        <button id="izquierda">← Izquierda</button>
+        <button id="abajo">↓ Abajo</button>
+        <button id="derecha">→ Derecha</button>
+      </div>
+    </section>
+
+  <section id="puzzle-section" class="hidden">
+    <h2>¡Ahora intenta armar este regalo!</h2>
+    <div id="puzzle"></div>
+    <button id="skip-puzzle-btn">Sáltalo 🥺</button>
+  </section>
+
+  <section id="skipped-section" class="hidden">
+  <h2>Este es el resultado💞</h2>
+  <p></p>
+  <img src="images\imagen.png" class="puzzle-preview" alt="Puzzle completo" />
+  <br />
+  <button id="btn-continuar-skipped">Continuar..</button>
+  </section>
+
+
+  <section id="cake-section" class="hidden">
+    <h2>¡Hora del pastel!</h2>
+    <img src="images\cake.png" alt="Pastel de cumpleaños" class="cake-image" />
+    <p>¡Sopla las velas!</p>
+    <div class="candle-area">
+      <div class="candle">🕯️</div>
+      <div class="candle">🕯️</div>
+      <div class="candle">🕯️</div>
+    </div>
+  </section>
+
+  
+
+  <section id="final-section" class="hidden">
+    <input type="radio" name="gift" id="gift1" checked>
+    <input type="radio" name="gift" id="boton1">
+    <input type="radio" name="gift" id="small-gift-message">
+    <input type="radio" name="gift" id="mensajeFinal">
+
+    <div class="container">
+      <div class="content">
+
+        <label for="gift1" class="gift" id="gift1">🎁</label>
+        <div class="initial-gift-message">¡Tienes un mensaje!</div>
+
+        <div class="dibujo">
+          <div class="vaca">
+            <img style="width: 25vh;" src="images/vaca.png" alt="Vaca" />
+          </div>
+          <div class="carta">
+            <img style="width: 14vh;" src="images/carta.png" alt="Carta" />
+          </div>
+        </div>
+
+        <label for="boton1" class="boton" id="boton1">Pulsa aquí</label>
+
+        <label for="small-gift-message" class="small-gift-message" id="small-gift-message">💌</label>
+        <label for="texto-small-gift-message" class="texto-small-gift-message" id="texto-small-gift-message">Pulsa en la carta para abrir</label>
+
+        <div class="mensajeFinal" id="mensajeFinal">
+          <span class="textoCarta">
+            Mimor: <br><br>
+            Hoy es tu cumpleaños, y aunque la distancia me impide abrazarte, quiero aprovechar esta oportunidad para decirte cosas que tal vez no siempre digo.
+
+Deseo que este nuevo año de vida te regale calma, momentos simples que te hagan bien y personas que sumen de verdad.
+Te mereces sentirte valorado, escuchado y acompañado, no solo hoy, sino todos los días.
+
+Desde que apareciste en mi vida, han cambiado muchas cosas. No siempre ha sido fácil, pero aún con dudas, con silencios, con distancias, hay algo que me hace seguir acá: la forma en que conectamos, aunque a veces no sepamos muy bien cómo explicarlo.
+
+Gracias por lo que compartimos, por las risas, las conversaciones, los silencios cómodos y también por los momentos incómodos que igual decidimos atravesar.
+
+Feliz cumpleaños! 
+Ojalá este día te haga sentir especial de alguna forma, y que sepas que hay alguien, al otro lado, que sí te tiene presente y te lleva siempre en sus pensamientos.
+
+Con cariño,
+
+Ale.❤️<br><br>
+          </span>
+          
+          <div>
+            <button id="btn-go-tocadiscos" style="margin-top: 20px">
+              ir al Tocadiscos
+            </button>
+
+          </div>
+        </div>
+        <!-- Botón para ir a la música -->
+        
+
+      </div>
+    </div>
+  </section>
+
+
+ <section id="tocadiscos-section" class="hidden">
+  <h1>¡Esta canción es para ti!</h1>
+      <p>Arrastra el Disco sobre el tocadiscos y dale play.</p>
+      <p></p>
+  <div class="turntable-wrapper">
+    <div class="turntable">
+      <div class="turntable-base">
+        <div class="platter">
+          <div class="vinyl-record" id="vinyl">
+            <div class="groove groove-1"></div>
+            <div class="groove groove-2"></div>
+            <div class="groove groove-3"></div>
+            <div class="groove groove-4"></div>
+            <div class="groove groove-5"></div>
+            <div class="center-label">
+              <div class="label-inner">
+                <div class="center-hole"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tonearm" id="tonearm">
+          <div class="arm-base"></div>
+          <div class="arm-tube"></div>
+          <div class="cartridge"></div>
+          <div class="counterweight"></div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="control-btn play-btn" id="playBtn">
+            <span id="playPauseIcon">▶</span>
+          </button>
+
+        <button class="control-btn stop-btn" id="stopBtn">⏹</button>
+      </div>
+
+      <audio id="audio" src="audio\mi-cancion.mp3"></audio>
+    </div>
+  </div>
+  <div id="cd"></div>
+  <div id="mensaje-aviso" class="mensaje-aviso hidden">Por favor, inserta el disco en el tocadiscos antes de reproducir.</div>
+
+</section>
+</div>
+</main>
+<div id="custom-alert" class="hidden"></div>
+<div id="confirm-modal" class="hidden">
+  <div class="confirm-box">
+    <p>¿Seguro que quieres saltarlo? 😢</p>
+    <div class="confirm-actions">
+      <button id="confirm-yes">Sí, continuemos 💖</button>
+      <button id="confirm-no">No, sigo jugando ✨</button>
+    </div>
+  </div>
+</div>
+<div id="cake-rain-container"></div>
+
+<audio id="message-sound" src="audio/sms.mp3" preload="auto"></audio>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
