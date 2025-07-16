@@ -205,7 +205,7 @@ spamBtn.addEventListener('click', () => {
 // Frases spam amor
 const spamPhrases = [
   "Feliz cumpleaños", "Te quiero🥰", "Me gustas",
-  "Eres único 💫", "Te valoro 🌟", "Gracias por existir 💖","Me encantas","Te quiero mimor","Mimor picioso","Te pienso mucho"
+  "Eres único 💫", "Te valoro 🌟", "Gracias por existir 💖","Me encantas","Te quiero Mimor","Mimor picioso","Te pienso mucho"
 ];
 
 
@@ -453,7 +453,7 @@ class Turntable {
   }
 
   if (!this.mensajeMostrado) {
-  showMessage('Fin del recorrido mimor, espero te haya gustado. ¡Feliz cumpleaños!', 10000); // 10 segundos
+  showMessage('Fin del recorrido Mimor, espero te haya gustado. ¡Feliz cumpleaños!', 10000); // 10 segundos
   this.mensajeMostrado = true;
 }
 
